@@ -1,5 +1,7 @@
 function mincost(arr) {
     if (arr.length === 1) return 0; 
+ 
+    arr.sort((a, b) => a - b); 
     
     let minHeap = [];
     
@@ -19,6 +21,7 @@ function mincost(arr) {
         
         minHeap.push(mergeCost);
         
+        minHeap.sort((a, b) => a - b);
     }
     
     return minCost;
